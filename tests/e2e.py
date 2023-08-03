@@ -1,11 +1,11 @@
 import allure
-from allure_commons.types import Severity
-from selene import have, command, browser
+from selene import have, command
 from pages.app import RegistrationPage
 
 
 @allure.title('Успешное заполнение формы регистрации студента')
 def test_register_demo_user_using_practice_form(setup_browser):
+    browser = setup_browser
 
     app = RegistrationPage()
 
