@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
 from selene import browser, have, command
-from src.pages.app import RegistrationPage
+from pages import RegistrationPage
 
 
 @allure.label("owner", "abarashkov")

@@ -4,11 +4,11 @@ from pathlib import Path
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selene import Browser, Config, browser
+from selene import browser
 from dotenv import load_dotenv
-from src.utils import attach
+from utils import attach
 
-import src.tests
+import tests
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
@@ -21,7 +21,7 @@ def pytest_addoption(parser):
 
 
 def path(file_name):
-    return str(Path(src.tests.__file__).parent.joinpath(f'resources/{file_name}').absolute())
+    return str(Path(tests.__file__).parent.joinpath(f'resources/{file_name}').absolute())
 
 
 @pytest.fixture(scope='session', autouse=True)
