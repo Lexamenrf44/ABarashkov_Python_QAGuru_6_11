@@ -4,10 +4,7 @@ from selene import have, command, browser
 from pages.app import RegistrationPage
 
 
-@allure.label("owner", "abarashkov")
-@allure.tag('web')
-@allure.severity(Severity.NORMAL)
-@allure.story('With allure steps')
+@allure.title('Успешное заполнение формы регистрации студента')
 def test_register_demo_user_using_practice_form(setup_browser):
 
     app = RegistrationPage()
