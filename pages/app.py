@@ -1,5 +1,5 @@
 from selene import browser, have, command, be
-from tests.conftest import path
+from conftest import path
 
 
 class RegistrationPage:
