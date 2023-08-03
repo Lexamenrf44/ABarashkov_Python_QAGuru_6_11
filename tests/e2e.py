@@ -1,6 +1,6 @@
 import allure
 from allure_commons.types import Severity
-from selene import browser, have, command
+from selene import have, command, browser
 from pages.app import RegistrationPage
 
 
@@ -8,7 +8,7 @@ from pages.app import RegistrationPage
 @allure.tag('web')
 @allure.severity(Severity.NORMAL)
 @allure.story('With allure steps')
-def test_register_demo_user_using_practice_form():
+def test_register_demo_user_using_practice_form(setup_browser):
 
     app = RegistrationPage()
 
